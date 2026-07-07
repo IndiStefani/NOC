@@ -21,3 +21,18 @@
 
 ## Failover dengan Netwatch
 `/ip firewall nat enable [/ip firewall nat find comment="game-roblox-27.131.1.1"] /ip address enable [/ip address find comment ="Petro-China_2405171543"]`
+
+# Switch Cisco
+
+## Melihat status route
+`show route 18.168.116.121`
+
+## Melihat detail status receiver pada interface
+`show interface ethernet 1/40 transceiver details`
+
+## Melihat detail interface
+`show interface ethernet 1/40`
+`show interface eth1/40 switchport`
+
+## Melihat routing BGP untuk ip destination
+`show bgp summary | match (ip addres tujuan)`

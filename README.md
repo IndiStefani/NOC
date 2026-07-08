@@ -65,3 +65,13 @@
  ##
  `display interface brief`
  `display ip interface brief`
+
+ ### Saat ada laporan "internet down", urutan pengecekan yang umum adalah:
+
+1. Cek status interface `(display interface / show interfaces)`.
+2. Cek apakah IP interface masih benar `(display ip interface brief / show ip interface brief)`.
+3. Ping gateway atau next-hop.
+4. Cek routing `(display ip routing-table / show ip route)`. Jika menggunakan BGP, cek sesi BGP (display bgp peer / show bgp summary).
+5. Lakukan `traceroute` untuk melihat jalur paket.
+6. Periksa log `(display logbuffer / show logging)`.
+7. Jika menggunakan fiber, cek kondisi optik `(display transceiver / show interfaces transceiver detail)`.

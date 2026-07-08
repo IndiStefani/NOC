@@ -46,3 +46,22 @@
 `display interface XGigabitEthernet 0/0/37`
 
 `display interface gi 0/0/4`
+
+## Menampilkan routing BGP
+`show route advertising-protocol bgp 175.184.239.189`
+
+## Menampilkan informasi sesi BGP dengan neighbor yang memiliki IP
+`show bgp summary | match 175.184.239.189`
+
+## Menampilkan informasi detail mengenai satu neighbor BGP
+`show bgp neighbor 175.184.239.189`
+
+## Menampilkan routing di detail routing untuk ip
+ `show route 45.115.65.193`
+
+ ##
+ `ping -vpn-instance underlay_(1/2) 8.8.8.8`
+
+ ##
+ `display interface brief`
+ `display ip interface brief`

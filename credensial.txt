@@ -1,0 +1,59 @@
+===== CRM COMET =====
+https://crm.comet.net.id/
+noc.global@sbp.net.id
+Sbpnet2024#
+
+
+===== PIZZA SOLARWIND =====
+https://pizza.sbp.net.id/Orion/Login.aspx
+bali
+sbpbali2020
+
+
+===== OTRS TICKET =====
+https://support.sbp.net.id/otrs/index.pl
+indi
+Sbpku26#
+
+
+===== ACS ASIANET =====
+
+https://ayana.asianet.co.id/main/home
+username : comet.admin2
+Password : amt@2025
+
+
+===== ACS FIBERSTAR =====
+http://172.20.0.11:8080/acs/index.xhtml
+user	: acs.solusi
+pass	: #Sbp2025
+
+
+===== ACS GUARDIAN =====
+https://sg.naas.huaweicloud.com/campusNCE/campusNCEIndex.html
+Username: Sbp-prov
+Password: Sbp123@#$
+
+
+===== RUIJIE CLOUD =====
+Ruijie Cloud
+https://cloud-as.ruijienetworks.com/
+user	: riant@sbp.net.id
+pass	: SBP@Ru171e#
+
+Ruijie Cloud Gmail
+user	: sbpnetnoc@gmail.com
+pass	: Sbpnetku@24#
+
+
+===== FTTH INSTALASI =====
+https://ftthidc.sbp.net.id/login.php
+https://ftthbandung.sbp.net.id/
+https://ftth.sbp.net.id/login.php
+
+administrator
+Sbpku2021#
+
+
+===== ZIMBRA MAIL =====
+https://mail.sbp.net.id/

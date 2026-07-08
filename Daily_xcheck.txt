@@ -1,0 +1,9 @@
+00115438	Biasa 	07 JUL 2026 17:12:03 LOSS 8 jam 58 menit 
+Berikut hasil pengecekan saat ini :
+
+- Status dial
+- Uptime pppoe -+3 Jam
+- Traffic -+ 23Mbps   
+
+Moban untuk FU ke customer apakah sudah normal kembali?
+Tidak dapat akses ke perangkat. Jika tidak ada kendala tidak perlu melakukan kunjungan @CSC SBP

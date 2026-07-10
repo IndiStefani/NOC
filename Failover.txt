@@ -1,0 +1,13 @@
+== UP ==
+/log info "180.252.1.105 Hop-3 via Indihome Up"
+/routing/rule/set [find comment="FemtoCell Indihome"] disabled=no
+/routing/rule/set [find comment="VLAN-10 employee"] disabled=no
+/routing/rule/set [find comment="VLAN-30 POS System"] disabled=no
+/routing/rule/set [find comment="Vlan-10,30,FC via JLM"] disabled=yes
+
+== DOWN ==
+/log info "180.252.1.105 Hop-3 via Indihome Down"
+/routing/rule/set [find comment="FemtoCell Indihome"] disabled=yes
+/routing/rule/set [find comment="VLAN-10 employee"] disabled=yes
+/routing/rule/set [find comment="VLAN-30 POS System"] disabled=yes
+/routing/rule/set [find comment="Vlan-10,30,FC via JLM"] disabled=no

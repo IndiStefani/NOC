@@ -91,7 +91,7 @@ show pon power attenuation gpon-onu_1/1/2:21	    Melihat power di ONU
 show mac gpon onu gpon-onu_1/1/19		            Melihat MAC address yang aktif di ONU
 show mac E4CA.12C5.C0A4			                    Mencari/Melihat berdasarkan Mac Address (34A2.A2FA.3489) yang aktif
 show gpon onu by sn ZTEGC88B446C		            Mencari/Melihat berdasarkan Serial Number
-show running-config | begin 00400347  		        Mencari/Melihat berdasarkan Description
+show running-config | begin 00402388  		        Mencari/Melihat berdasarkan Description
 
 show gpon onu detail-info gpon-onu_1/1/2:20         Melihat status detail/description ONU CPE/log ONT
 show running interface gpon-onu_1/1/16:90		    Melihat konfigurasi di interface OLT

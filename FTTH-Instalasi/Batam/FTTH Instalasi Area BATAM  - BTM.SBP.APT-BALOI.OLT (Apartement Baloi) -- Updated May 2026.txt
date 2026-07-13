@@ -27,14 +27,14 @@ ID		            : BTM.APR-BALOI.COMET.RD1
 ======  ONU TYPE  ========================
 HG8546M
 HG8245H5
-ZTEG-F609
+ZTE-F609
 OPEN_ZTE
 
 =====  Apartemen Baloi  ======
 ========  Cek ONU Unregistrasi  ==========
 show gpon onu uncfg
 
-show gpon onu by sn HWTC7F6724F2
+show gpon onu by sn ZXICC9BD0A0C
 
 ========  Cek LLID Kosong  ============
 show running-config interface gpon-olt_1/1/1
@@ -44,7 +44,7 @@ configure terminal
 interface gpon-olt_1/1/1
 no onu 17
 
-onu 17 type HG8245H5 sn HWTC7F6724F2
+onu 1 type ZTE-F609 sn ZXICC9BD0A0C
 exit
 
 int gpon-onu_1/1/1:17

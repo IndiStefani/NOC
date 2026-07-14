@@ -1,3 +1,9 @@
+=== Port Switch SSH ===
+571
+indi
+B4nyuWan91-26
+
+
 ===== CRM COMET =====
 https://crm.comet.net.id/
 noc.global@sbp.net.id

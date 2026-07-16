@@ -1,0 +1,35 @@
+Dear team,
+
+
+
+Berikut hasil pengecekan saat ini:
+- berdasarkan last cause (DyingGasp) indikasi kendala kelistrikan di lokasi
+saat ini sudah termonitoring UP
+
+Atas perhatian dan kerjasamanya kami ucapkan terimakasih
+
+Regards,
+Indi
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+Dear team,
+
+
+
+Berikut hasil pengecekan saat ini : 
+- status online
+- uptime perangkat normal
+- traceroute ke internet lan customer normal
+- ping ptp size=1500 do-not-fragment reply tanpa paket los
+- trafik WAN
+    Tx: 828.4 kbps
+    Rx: 5.3 Mbps
+- trafic LAN
+    Tx: 5.3 Mbps
+    Rx: 631.1 kbps
+
+Berdasarkan log, Router mengalami restart/reboot tanpa proses shutdown yang benar. indikasi kendala kelistrikan di lokasi
+saat ini link termonitoring UP normal dan stabil
+
+Atas perhatian dan kerjasamanya kami ucapkan terimakasih

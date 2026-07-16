@@ -1,0 +1,126 @@
+======HSP BALI Shenzhen C-Data Technology==================================================
+sbpcomet/cometsbp25
+admin/admin
+
+======IdPlay============================================================
+username    : superuser
+Pass        : supertis123
+
+======HUAWEI=========================================================================================================
+User name   : Support
+Password    : theworldinyourhand
+
+User name   : Support
+Password    : sbp
+
+User name   : Support
+Password    : nocfmi2020  (khusus FMI)
+
+User name   : Supportsbp
+Password    : sbpsupport
+
+User name   : telecomadmin
+Password    : admintelecom
+
+User name   : root
+Password    : admin
+
+User name   : telecomadmin
+Password    : g1g.4dm1n
+
+======ONT ZHENZEN====================================================================
+username    : adminisp
+pass        : adminisp
+==================================================================================
+
+======ONT ZTE FIBERSTAR====================================================================
+username    : admin
+Pass        : Fs@1500879
+==================================================================================
+
+======ONT Raisecom ====================================================================================================
+user        : superadmin
+pass        : q!w@e#
+
+theworldinyourhand
+
+======TENDA============================================================================================================
+Sbp2020
+sbpcomet2020    [bisa di Tenda Bandung]
+Sbpcomet2020
+cometsbp2022
+Cometsbp2022
+Sbpcomet2022
+sbpcomet2022
+sbpcomet2021
+Sbpcomet2021
+Comet123
+comet123
+admin
+sbpcomet2023
+Sbpcomet2023
+sbpcomet2024
+
+==================COMET CIREBON :================================
+cometcirebon2020
+cometcbn123
+comet123
+
+f03f-95fd-83dd
+
+======HSP BALI Shenzhen C-Data Technology==================================================
+sbpcomet/cometsbp25
+admin/admin
+
+======ZTE=============================================================================================================
+user : admin
+pass : SBPNet2020
+
+user : admin
+pass : Sbpcomet2020
+
+user : admin
+pass : sbpcomet2020
+[bisa untuk zte di TPI]
+
+User : admin
+Pass : Web@0063
+
+Username = admin
+Password = zep2kjzol
+
+Username = admin
+Password = Pq@54r!e8ow&q#u
+
+Username = admin
+Password = Telkomdso123
+
+Username = admin
+Password = telkomjatineg4r4
+
+Username = admin
+Password = Qc!80ebor3#to#b
+
+Username = admin
+Password = Yu9j#4qa!rth#y
+
+Username = admin
+Password = Mn@lh4!nk9#m
+
+Username = admin
+Password = Dj9@t!n03g4r6#f
+
+Username = support 
+Password = support
+
+Username = support
+Password = theworldinyourhand
+
+Username = root
+Password = admin
+
+Username= admin
+Pass 	= admin
+
+
+ZTEGCBDF458B

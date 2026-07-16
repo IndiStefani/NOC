@@ -1,0 +1,95 @@
+===========  Setup Bind BTM.SBP.APT-BALOI.OLT POP APT-BALOI  ===========
+Remote		: SSH & Telnet
+IP Address	: 172.17.18.1
+Username	: proSBP
+Passsword	: SBPro2018
+Mac Address	: 4C:AC:0A:DC:2A:BB
+Vlan		: 3960
+ID		    : BTM.SBP.APT.OLT
+-------------------------------------------------------------
+Router Distribusi	: 10.255.255.222
+ID		            : BTM.APR-BALOI.COMET.RD1
+-------------------------------------------------------------
+
+======  VLAN SERVICE  ===========================
+100		APR-BALOI.CMT.50M
+304		APR-BALOI.CMT.60M
+200		APR-BALOI.CMT.75M
+300		APR-BALOI.CMT.100M
+301		APR-BALOI.CMT.150M
+302		APR-BALOI.CMT.200M
+303		APR-BALOI.CMT.1G
+
+333		GPN.CMT.IPoE.Manage
+50		CCTV-APR-BALOI
+-------------------------------------------------------------
+
+======  ONU TYPE  ========================
+HG8546M
+HG8245H5
+ZTE-F609
+OPEN_ZTE
+
+=====  Apartemen Baloi  ======
+========  Cek ONU Unregistrasi  ==========
+show gpon onu uncfg
+
+show gpon onu by sn ZTEGD771F8AE
+
+========  Cek LLID Kosong  ============
+show running-config interface gpon-olt_1/2/8
+
+-------------------------------------------------------------
+configure terminal
+interface gpon-olt_1/2/8
+no onu 10
+
+onu 10 type ZTE-F609 sn ZTEGD771F8AE
+exit
+
+int gpon-onu_1/2/8:10
+description CMT.BTM - 00300784 MELYANA
+sn-bind enable sn
+tcont 1 name PPPoE profile FTTH-T4-1G
+gemport 1 name PPPoE tcont 1
+switchport mode hybrid vport 1
+service-port 1 vport 1 user-vlan 301 vlan 301
+exit
+
+pon-onu-mng gpon-onu_1/2/8:10
+service PPPoE gemport 1 vlan 301
+security-mgmt 2 state enable mode forward protocol web https
+exit
+exit
+write
+
+------------  Lampirkan Sesudah Instalasi  -------------------------------
+show pon power attenuation gpon-onu_1/2/8:10
+show mac gpon onu gpon-onu_1/2/8:10
+
+---------------------------------------------------------------------------------
+
+-----------------  Data Penunjang  -----------------------------------------
+show mac 34a2.a2fa.337c			                Mencari/Melihat berdasarkan Mac Address (34A2.A2FA.3489) yang aktif
+show gpon onu by sn ZXICC9BD2DEA		        Mencari/Melihat berdasarkan Serial Number
+show gpon onu by sn ZXICC8CDC9C2
+show gpon onu by sn HWTC7F6524F2
+show running-config | begin 00300784 		    Mencari/Melihat berdasarkan Description
+
+show pon power attenuation gpon-onu_1/1/1:66	Melihat power di ONU
+show mac gpon onu gpon-onu_1/1/1:17		        Melihat MAC address yang aktif di ONU
+
+show gpon onu detail-info gpon-onu_1/1/2:42	    Melihat status detail/description ONU CPE/log ONT
+show running interface gpon-onu_1/1/2:63		Melihat konfigurasi di interface OLT
+show onu running config gpon-onu_1/1/2:63	    Melihat konfigurasi di PON ONU
+show onu running config gpon-onu_1/1/2:8
+
+show gpon onu state gpon-olt_1/1/2		        Melihat Status (working, dying-gasp, loss) seluruh ONU di interface PON 1/2/15  
+show pon power onu-rx gpon-olt_1/1/1		    Melihat seluruh redaman di dalam 1 PON
+show running-config interface gpon-olt_1/2/6	Melihat list ONU di dalam satu interface PON 1/2/6
+
+
+
+
+
+

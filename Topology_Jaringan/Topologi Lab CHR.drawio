@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="L5UiM7db23S0SZnfxqu7">
-    <mxGraphModel dx="1703" dy="979" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1834" dy="1054" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -123,6 +123,21 @@
         </mxCell>
         <mxCell id="kvIC3R_2eUWdjPi7k7g7-58" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=light-dark(#000000,#FF8000);labelBackgroundColor=default;" value="192.168.100.0/24" vertex="1">
           <mxGeometry height="30" width="60" x="395" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="p4oaz2RVyFJQf-LmTLgF-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=light-dark(#000000,#FF0000);labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Site B&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="630" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="p4oaz2RVyFJQf-LmTLgF-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=light-dark(#000000,#FF0000);labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Site D&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="p4oaz2RVyFJQf-LmTLgF-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=light-dark(#000000,#FF0000);labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Site A&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="395" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="p4oaz2RVyFJQf-LmTLgF-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=light-dark(#000000,#FF0000);labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Site C&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="395" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="p4oaz2RVyFJQf-LmTLgF-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=light-dark(#000000,#FF0000);labelBackgroundColor=none;" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="395" y="765" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

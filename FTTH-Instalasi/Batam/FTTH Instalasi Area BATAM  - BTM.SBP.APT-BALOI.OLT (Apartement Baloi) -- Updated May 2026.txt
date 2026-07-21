@@ -34,40 +34,38 @@ OPEN_ZTE
 ========  Cek ONU Unregistrasi  ==========
 show gpon onu uncfg
 
-show gpon onu by sn ZXICC9BD0A0C
+show gpon onu by sn ZTEGD771F8AE
 
 ========  Cek LLID Kosong  ============
-show running-config interface gpon-olt_1/1/1
+show running-config interface gpon-olt_1/2/8
 
 -------------------------------------------------------------
 configure terminal
-interface gpon-olt_1/1/1
-no onu 17
+interface gpon-olt_1/2/8
+no onu 10
 
-onu 1 type ZTE-F609 sn ZXICC9BD0A0C
+onu 10 type ZTE-F609 sn ZTEGD771F8AE
 exit
 
-int gpon-onu_1/1/1:17
-description CMT-BTM-APR-008-12 - 00301125 DEVI SENTIA
+int gpon-onu_1/2/8:10
+description CMT.BTM - 00300784 MELYANA
 sn-bind enable sn
 tcont 1 name PPPoE profile FTTH-T4-1G
 gemport 1 name PPPoE tcont 1
 switchport mode hybrid vport 1
-service-port 1 vport 1 user-vlan 100 vlan 100
+service-port 1 vport 1 user-vlan 301 vlan 301
 exit
 
-pon-onu-mng gpon-onu_1/1/1:17
-service PPPoE gemport 1 vlan 100
-vlan port eth_0/1 mode hybrid
-vlan port eth_0/1 vlan 100
+pon-onu-mng gpon-onu_1/2/8:10
+service PPPoE gemport 1 vlan 301
 security-mgmt 2 state enable mode forward protocol web https
 exit
 exit
 write
 
 ------------  Lampirkan Sesudah Instalasi  -------------------------------
-show pon power attenuation gpon-onu_1/1/1:17
-show mac gpon onu gpon-onu_1/1/1:17
+show pon power attenuation gpon-onu_1/2/8:10
+show mac gpon onu gpon-onu_1/2/8:10
 
 ---------------------------------------------------------------------------------
 
@@ -76,7 +74,7 @@ show mac 34a2.a2fa.337c			                Mencari/Melihat berdasarkan Mac Addres
 show gpon onu by sn ZXICC9BD2DEA		        Mencari/Melihat berdasarkan Serial Number
 show gpon onu by sn ZXICC8CDC9C2
 show gpon onu by sn HWTC7F6524F2
-show running-config | begin 00301053		    Mencari/Melihat berdasarkan Description
+show running-config | begin 00300784 		    Mencari/Melihat berdasarkan Description
 
 show pon power attenuation gpon-onu_1/1/1:66	Melihat power di ONU
 show mac gpon onu gpon-onu_1/1/1:17		        Melihat MAC address yang aktif di ONU

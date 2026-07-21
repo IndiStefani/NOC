@@ -51,6 +51,121 @@ HG8546M
 ========  Cek ONU Unregistrasi  ==========
 show gpon onu uncfg
 
+show gpon onu by sn ZTEGD771F8AE
+
+========  Cek LLID Kosong  ============
+show running-config interface gpon-olt_1/2/8
+
+-------------------------------------------------------------
+configure terminal
+interface gpon-olt_1/2/8
+no onu 10
+
+onu 10 type ZTE-F609 sn ZTEGD771F8AE
+exit
+
+interface gpon-onu_1/2/8:10
+description CMT.BTM - 00300784 MELYANA
+sn-bind enable sn
+tcont 1 name PPPoE profile FTTH-T4-1G
+gemport 1 name PPPoE unicast tcont 1 dir both
+switchport mode hybrid vport 1
+service-port 1 vport 1 user-vlan 313 vlan 313
+exit
+
+pon-onu-mng gpon-onu_1/2/8:10
+service PPPoE gemport 1 vlan 313
+security-mng 2 state enable mode permit protocol web
+exit
+exit
+write
+
+
+------------  Lampirkan Sesudah Instalasi  -------------------------------
+show pon power attenuation gpon-onu_1/2/8:10
+show mac gpon onu gpon-onu_1/2/8:10
+
+---------------------------------------------------------------------------------
+
+-----------------  Data Penunjang untuk Xcek  -----------------------------------------
+show pon power attenuation gpon-onu_1/1/3:4	    Melihat power di ONU
+show mac gpon onu gpon-onu_1/1/13:30		        Melihat MAC address yang aktif di ONU
+
+show mac 2CC8.1B19.C77A			                Mencari/Melihat berdasarkan Mac Address (34A2.A2FA.3489) yang aktif
+show gpon onu by sn ZTEGC8A54E64		        Mencari/Melihat berdasarkan Serial Number
+show running-config | begin 00300370		    Mencari/Melihat berdasarkan Description
+
+show gpon onu detail-info gpon-onu_1/1/5:2 	Melihat status detail/description ONU CPE/log ONT
+show running interface gpon-onu_1/1/12:14		Melihat konfigurasi di interface OLT
+show onu running config gpon-onu_1/1/12:14	    Melihat konfigurasi di PON ONU
+
+show gpon onu state gpon-olt_1/1/13		        Melihat Status (working, dying-gasp, loss) seluruh ONU di interface PON 1/2/15  
+show pon power onu-rx gpon-olt_1/1/15		    Melihat seluruh redaman di dalam 1 PON
+show running-config interface gpon-olt_1/2/6	Melihat list ONU di dalam satu interface PON 1/2/6
+
+
+-----
+#Ganti ONT/SN tanpa re-bind
+BTM.GPN.OLT(config)#interface gpon-onu_1/1/5:27
+BTM.GPN.OLT(config-if)#registration-method sn ZTEGD771F8AE	
+-----
+
+
+
+
+=====  Setup Bind BTM.GPN.OLT POP AP,AV,MB,MJ,DMB  =====
+Remote		: SSH & Telnet
+IP Address	: 172.17.2.2
+Username	: proSBP
+Passsword	: SBPro2018
+Mac Address	: 4cac.0adb.285d
+Vlan		: 3001
+ID		    : BTM.GPN.OLT-1
+-----
+
+
+======  VLAN SERVICE  POP AP,AV,MB,MJ ================
+314		GPN.CMT.Ansley.25M
+316		GPN.CMT.Ansley.50M
+312		GPN.CMT.Ansley.60M
+315		GPN.CMT.Ansley.75M
+317		GPN.CMT.Ansley.100M
+313		GPN.CMT.Ansley.150M
+319		GPN.CMT.Ansley.200M
+320		GPN.CMT.Ansley.1G
+
+333		GPN.CMT.IPoE.Manage
+318		SBP.CCTV-MONDE-BAY
+-------------------------------------------------------------
+Router Distribusi	: 172.31.128.28
+ID		            : BTM.GPN.COMET.RD1 || ANSLEY
+-------------------------------------------------------------
+
+======  VLAN SERVICE  POP MS,MR,MJ,MC ==============
+160		GPN.CMT.Monde.25M
+161		GPN.CMT.Monde.50M
+164		GPN.CMT.Monde.60M
+165		GPN.CMT.Monde.75M
+162		GPN.CMT.Monde.100M
+166		GPN.CMT.Monde.150M
+167		GPN.CMT.Monde.200M
+168		GPN.CMT.Monde.1G
+
+150		SBP.CCTV-CLUBHOUSE
+-------------------------------------------------------------
+Router Distribusi	: 172.31.128.29
+ID		            : BTM.GPN.COMET.RD2 || MONDE
+-------------------------------------------------------------
+
+======  ONU TYPE  =================================
+ZTE-F609
+HG8245H5
+HG8546M
+-----------------------------------
+
+========  Cek ONU Unregistrasi  ==========
+show gpon onu uncfg
+
 show gpon onu by sn ZXICC9BB64C3
 
 ========  Cek LLID Kosong  ============

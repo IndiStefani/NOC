@@ -1,0 +1,4 @@
+/queue simple enable [find comment ="layanan dikembalikan ke semula 20 jul2026 ll req pak erha"]
+/queue simple set [find comment ="layanan dikembalikan ke semula 20 jul2026 ll req pak erha"] comment="BLI.CGS.PT MAJAVI BALI STARS - AKASAKA-BALI.2508081721 ( Mainlink )" max-limit=301M/301M
+
+/log info "BOD AKASAKA 2508081721 Ended: Bandwidth has been reverted to the original configuration. || Script Configure By NOC-SBP"

@@ -99,9 +99,3 @@ show running-config interface gpon-olt_1/1/2	    Melihat list ONU di dalam satu 
 OLT(config)#interface gpon-onu_1/1/2:1
 OLT(config-if)#registration-method sn ZXICC8CE87A9
 
-
-
-
-
-
-ZXICC9B3DE42

@@ -84,6 +84,10 @@ show onu running config gpon-onu_1/1/2:19	Melihat Konfigurasi PON ONU
 show gpon onu state gpon-olt_1/1/5
 show pon power onu-rx gpon-olt_1/1/4	
 
+#Ganti ONT/SN tanpa re-bind
+BTM.GPN.OLT(config)#interface gpon-onu_1/1/5:27
+BTM.GPN.OLT(config-if)#registration-method sn ZTEGD771F8AE
+
 ===== FAT CODE
 CMT-BTM-FRG-008-14
 CMT-BTM-FRG-008-15

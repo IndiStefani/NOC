@@ -22,6 +22,7 @@ show interfaces GigabitEthernet0/0
 show interfaces counters errors
 show interfaces description
 ip address 192.168.1.1 255.255.255.0
+show mac address-table dynamic vlan 2402 | include 1fd
 ```
 
 ### CPU & Memory

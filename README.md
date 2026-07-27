@@ -21,6 +21,7 @@ Kumpulan command yang sering dipakai untuk operasional OLT GPON, Mikrotik, dan S
 | Menampilkan informasi jam | `show clock` |
 | Restart 1 card PON | `reset-card <slotno>` |
 | Melihat status perangkat ONU | `show running interface gpon-onu_1/1/12:17` |
+| Melihat status pon di olt | `show interface gpon-olt_1/2/12` |
 
 ---
 

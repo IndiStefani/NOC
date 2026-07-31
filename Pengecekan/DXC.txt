@@ -1,10 +1,12 @@
 00106957	Biasa   	17 JUN 2026 19:00:03	Internet Tidak Terhubung 	12 jam 15 menit   
 Berdasarkan hasil pengecekan saat ini:
 Status dial
-Redaman Sebelumnya (-23 dbm)
-Redaman Sekarang (-25 dbm)
-Uptime pppoe -+ 6 Jam
-Traffic -+ 300 bps
+Redaman Datek awal (-15.67 dbm)
+Redaman Sekarang (-16.31 dbm)
+Uptime pppoe -+ 5 Jam
+Traffic -+ 107.9 Kbps
+
+Moban fu cust apakah internet dilokasi saat ini sudah normal?
 
 Sudah terdapat 2 devices yang terhubung namun belum ada aktivitas penggunaan. 
 Moban FU ke cust apakah internet dilokasi saat ini sudah normal?
@@ -12,22 +14,17 @@ Moban FU ke cust apakah internet dilokasi saat ini sudah normal?
 Perangkat tidak diakses melalui PPoE dan IPoE
 Mohon dibantu pengecekan bersama cust dilokasi, fokusnya ke perangkat cust yang terkendala.
 
-Moban fu cust apakah internet dilokasi saat ini sudah normal?
-
 Berdasarkan hasil pengecekan saat ini:
 - 7 Perangkat terhubung ke perangkat 
 - Channel Wlan berada pada channel 11
 - Pada channel 2,4Ghz terdapat 6 Access Point dilokasi yang intervensi
 
 
+dragon breath 300
+dark step 300
+water kungfu 400
+electric 300
 
-2308151142. ( Terminasi 14 Agustus 2026 )
-
-
-ubah data dulu di notepad
-setup vlan baru di ont
-unbind ont
-regis ulang di olt dengan LLID baru
-
-
-Areca 1/1/5:9
+superhuman 400
+dark step 300
+sharkman

@@ -33,3 +33,32 @@ Berdasarkan log, Router mengalami restart/reboot tanpa proses shutdown yang bena
 saat ini link termonitoring UP normal dan stabil
 
 Atas perhatian dan kerjasamanya kami ucapkan terimakasih
+
+////////////////////////////////////////////////////////
+
+Berikut update pengecekan saat ini
+- status online
+- uptime router normal
+- test ping PTP dengan size 1500 df berhasil reply normal tanpa paket loss
+- trace ke 8.8.8.8 src IP Publik cust berhasil reply
+- tarfik LAN -+ 145 kbps
+- traffik WAN -+ 420 kbps
+Berdasarkan log cpe, terdapat flapping pada hop-1 via CGS
+
+///////////////////////////////////////////////////////
+
+Berikut hasil update monitoring:
+✅ Ping ke 8.8.8.8 berhasil 100/100, packet loss 0%, latency min/avg/max 45/46/47 ms.
+✅ Ping ke 1.1.1.1 berhasil 100/100, packet loss 0%, latency min/avg/max 30/30/35 ms.
+Berdasarkan hasil monitoring tersebut,
+
+konektivitas internet broadband dari sisi CPE menuju internet dalam kondisi normal pada saat pengecekan dan tidak ditemukan indikasi packet loss maupun latency yang signifikan.
+
+
+Berikut update pengecekan saat ini
+Time: 0ms di semua baris → latency sangat rendah/bagus
+0% packet loss (68 dari 68 paket berhasil)
+Min/Avg/Max: 0ms semua
+TTL 64 konsisten → jalur stabil
+
+Kesimpulan: koneksi ke IP PTP ini sangat sehat, tidak ada latency dan tidak ada packet loss.

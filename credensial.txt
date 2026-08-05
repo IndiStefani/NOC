@@ -1,7 +1,18 @@
 === Port Switch SSH ===
 571
+
+SSH Switch Cisco
 indi
 B4nyuWan91-26
+
+SSH Switch Huawei
+SGP.EQ3.HW1							172.17.99.1	    ssh (sbpnet/Sbpnet@22#)
+JKT.APJ.HW1							172.17.100.1	ssh (sbpnet/sbpku2023#)
+JKT.DR3.HW1							172.17.101.1	ssh (sbpnet/Sbpnet@22#)
+BTM.GPN.SW01						172.17.2.1		ssh	(sbpnet/Sbpnet2023#)
+
+SBPORG
+@WL&o4O*mP#R!
 
 ===== UNIFY CLOUD =====
 https://global2.sbp.net.id:8443/manage/gc6xyf3s/dashboard

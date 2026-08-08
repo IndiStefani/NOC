@@ -1,11 +1,12 @@
-00106957	Biasa   	17 JUN 2026 19:00:03	Internet Tidak Terhubung 	12 jam 15 menit   
+00100636	Biasa   	03 AGS 2026 17:13:30	Internet Tidak Terhubung 	13 jam 26 menit   
 Berdasarkan hasil pengecekan saat ini:
 Status dial
-Redaman Datek awal (-15.67 dbm)
-Redaman Sekarang (-16.31 dbm)
-Uptime pppoe -+ 5 Jam
-Traffic -+ 107.9 Kbps
+Redaman Datek awal (-22.57 dbm)
+Redaman Sekarang (-16.80 dbm)
+Uptime -+ 5 Jam
+Traffic -+ 128 Kbps
 
+Action remove session PPPoE untuk memicu reconnect ulang.
 Moban fu cust apakah internet dilokasi saat ini sudah normal?
 
 Sudah terdapat 2 devices yang terhubung namun belum ada aktivitas penggunaan. 
@@ -26,5 +27,4 @@ water kungfu 400
 electric 300
 
 superhuman 400
-dark step 300
-sharkman
+sharkman 400

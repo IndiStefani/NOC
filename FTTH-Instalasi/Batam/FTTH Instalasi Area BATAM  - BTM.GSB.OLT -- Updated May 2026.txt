@@ -1,14 +1,14 @@
 ===========  Setup Bind BTM.MBS.OLT POP GRIYA SEI BINTI  ===========
 Remote		: SSH & Telnet
 IP Address	: 172.17.2.5
-Username		: sbpnet
+Username	: sbpnet
 Passsword	: sbpnet2022
 Mac Address	: fcc8.97b8.99e6
 Vlan Manage	: 3960
-ID		: BTM.GSB.OLT
+ID		    : BTM.GSB.OLT
 -------------------------------------------------------------
 Router Distribusi	: 27.131.6.38
-ID		: BTM.GPN.COMET.RD3
+ID		            : BTM.GPN.COMET.RD3
 -------------------------------------------------------------
 
 =====   VLAN SERVICE    =============

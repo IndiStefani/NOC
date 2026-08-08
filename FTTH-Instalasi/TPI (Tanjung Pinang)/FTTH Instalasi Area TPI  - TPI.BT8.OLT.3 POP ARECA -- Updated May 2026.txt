@@ -40,7 +40,7 @@ HG8245H5
 show gpon onu uncfg
 
 ========  Cek ONU apakah sudah teregistrasi di PON/LLID lain ?  =====
-show gpon onu by sn ZXICC8CD268C
+show gpon onu by sn ZXICC8CEC1A4
 
 ========  Cek LLID Kosong  ==================================
 show running-config interface gpon-olt_1/1/5
@@ -48,28 +48,26 @@ show running-config interface gpon-olt_1/1/5
 -------------------------------------------------------------
 configure terminal
 interface gpon-olt_1/1/5
-no onu 16
+no onu 19
 
-onu 16 type ZTE-F609 sn ZXICC8CD268C
+onu 19 type ZTE-F609 sn ZXICC8CEC1A4
 exit
 
-interface gpon-onu_1/1/5:16
-description CMT/FAT/AM - 00402399 RAJA FACHRURRAZI 
+interface gpon-onu_1/1/5:19
+description CMT/FAT/Hanglekir - 00402441 DZIKRI ILHAM RAMADHAN
 sn-bind enable sn
 tcont 1 name PPPoE profile FTTH-T4-1G
 gemport 1 name PPPoE tcont 1
 gemport 2 name IPoE tcont 1
 switchport mode hybrid vport 1
-switchport mode hybrid vpexort 2
-service-port 1 vport 1 user-vlan  616 vlan 616
+switchport mode hybrid vport 2
+service-port 1 vport 1 user-vlan  618 vlan 618
 service-port 2 vport 2 user-vlan 666 vlan 666
 exit
 
-pon-onu-mng gpon-onu_1/1/5:16
-service PPPoE gemport 1 vlan 616
+pon-onu-mng gpon-onu_1/1/5:19
+service PPPoE gemport 1 vlan 618
 service IPoE gemport 2 vlan 666
-vlan port eth_0/1 mode hybrid
-vlan port eth_0/1 vlan  616,666
 security-mgmt 2 state enable mode forward protocol web https
 exit
 exit
@@ -77,8 +75,8 @@ write
 
 
 ------------  Lampirkan Sesudah Instalasi  -------------------------------
-show pon power attenuation gpon-onu_1/1/5:16
-show mac gpon onu gpon-onu_1/1/5:16
+show pon power attenuation gpon-onu_1/1/5:19
+show mac gpon onu gpon-onu_1/1/5:19
 
 ---------------------------------------------------------------------------------
 

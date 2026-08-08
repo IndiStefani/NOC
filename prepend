@@ -1,177 +1,42 @@
-show configuration policy-options policy-statement RM-AS7713-OUT
-inactive: term prepend {
-    from {
-        inactive: prefix-list 27.131.0.0;
-        inactive: prefix-list 27.131.1.0;
-        inactive: prefix-list 27.131.2.0;
-        inactive: prefix-list 27.131.3.0;
-        inactive: prefix-list 27.131.4.0;
-        inactive: prefix-list 27.131.5.0;
-        inactive: prefix-list 27.131.6.0;
-        inactive: prefix-list 27.131.7.0;
-        inactive: prefix-list 45.115.64.0;
-        inactive: prefix-list 45.115.65.0;
-        inactive: prefix-list 45.115.66.0;
-        prefix-list 45.115.67.0;
-        inactive: prefix-list 103.29.4.0;
-        inactive: prefix-list 103.29.5.0;
-        inactive: prefix-list 103.29.6.0;
-        inactive: prefix-list 103.29.7.0;
-        inactive: prefix-list 119.110.80.0;
-        inactive: prefix-list 119.110.81.0;
-        inactive: prefix-list 119.110.82.0;
-        inactive: prefix-list 119.110.83.0;
-        inactive: prefix-list 119.110.84.0;
-        inactive: prefix-list 119.110.85.0;
-        inactive: prefix-list 119.110.86.0;
-        inactive: prefix-list 119.110.87.0;
-        inactive: prefix-list Net-IPv4/23;
-    }
-    then {
-        as-path-prepend "38753 38753";
-        accept;
-    }
-}
-term prefix-sbp {
-    from {
-        prefix-list 27.131.0.0;
-        inactive: prefix-list 27.131.1.0;
-        inactive: prefix-list 27.131.2.0;
-        prefix-list 27.131.3.0;
-        inactive: prefix-list 27.131.4.0;
-        inactive: prefix-list 27.131.5.0;
-        inactive: prefix-list 27.131.6.0;
-        inactive: prefix-list 27.131.7.0;
-        inactive: prefix-list 45.115.64.0;
-        inactive: prefix-list 45.115.65.0;
-        inactive: prefix-list 45.115.66.0;
-        prefix-list 45.115.67.0;
-        inactive: prefix-list 103.29.4.0;
-        inactive: prefix-list 103.29.5.0;
-        inactive: prefix-list 103.29.6.0;
-        inactive: prefix-list 103.29.7.0;
-        inactive: prefix-list 119.110.80.0;
-        inactive: prefix-list 119.110.81.0;
-        inactive: prefix-list 119.110.82.0;
-        inactive: prefix-list 119.110.83.0;
-        inactive: prefix-list 119.110.84.0;
-        inactive: prefix-list 119.110.85.0;
-        inactive: prefix-list 119.110.86.0;
-        inactive: prefix-list 119.110.87.0;
-    }
-    then accept;
-}
-
-@JKT.APJ.CO1# show policy-options policy-statement RM-AS7597-OUT
-term 1 {
-    from {
-        prefix-list 27.131.0.0;
-        prefix-list 27.131.1.0;
-        prefix-list 27.131.2.0;
-        prefix-list 27.131.3.0;
-        prefix-list 27.131.4.0;
-        prefix-list 27.131.5.0;
-        prefix-list 27.131.6.0;
-        prefix-list 27.131.7.0;
-        prefix-list 103.29.4.0;
-        prefix-list 103.29.5.0;
-        prefix-list 103.29.6.0;
-        prefix-list 103.29.7.0;
-        prefix-list 45.115.64.0;
-        prefix-list 45.115.65.0;
-        prefix-list 45.115.66.0;
-        prefix-list 45.115.67.0;
-        prefix-list 119.110.80.0;
-        prefix-list 119.110.81.0;
-        prefix-list 119.110.82.0;
-        prefix-list 119.110.83.0;
-        prefix-list 119.110.84.0;
-        prefix-list 119.110.85.0;
-        prefix-list 119.110.86.0;
-        prefix-list 119.110.87.0;
-    }
-    then {
-        community add te-sg-gs-to-apjii-ix;
-        accept;
-    }
-}
-
-otw peer JKT-IX
-
-@JKT.APJ.CO1# run show route advertising-protocol bgp 119.11.184.101
-
-inet.0: 1194718 destinations, 2700765 routes (1090591 active, 0 holddown, 207143 hidden)
-  Prefix                  Nexthop              MED     Lclpref    AS path
-* 16.10.2.0/24            Self                                    210873 ?
-* 27.131.0.0/24           Self                                    I
-* 27.131.1.0/24           Self                                    I
-* 27.131.2.0/24           Self                                    ?
-* 27.131.3.0/24           Self                                    I
-* 27.131.4.0/24           Self                                    I
-* 27.131.5.0/24           Self                                    38753 38753 [38753] I
-* 27.131.6.0/24           Self                                    38753 38753 [38753] I
-* 27.131.7.0/24           Self                                    38753 38753 [38753] I
-* 45.115.64.0/24          Self                                    38753 38753 [38753] I
-* 45.115.65.0/24          Self                                    I
-* 45.115.66.0/24          Self                                    38753 38753 [38753] I
-* 45.115.67.0/24          Self                                    38753 38753 [38753] I
-* 103.29.4.0/24           Self                                    38753 38753 [38753] I
-* 103.29.5.0/24           Self                                    38753 38753 [38753] I
-* 103.29.6.0/24           Self                                    38753 38753 [38753] I
-* 103.29.7.0/24           Self                                    I
-* 119.110.80.0/24         Self                                    38753 38753 [38753] I
-* 119.110.81.0/24         Self                                    38753 38753 [38753] I
-* 119.110.82.0/24         Self                                    I
-* 119.110.83.0/24         Self                                    38753 38753 [38753] I
-* 119.110.84.0/24         Self                                    38753 38753 [38753] I
-* 119.110.85.0/24         Self                                    38753 38753 [38753] I
-* 119.110.86.0/24         Self                                    I
-* 119.110.87.0/24         Self                                    38753 38753 [38753] I
 
 
+/////////////////////////////////
 
+JKT.DR3 <> GRIYA
+1. 119.110.84.181  	0%	sbp
+2  119.110.80.21   	0%	sbp
+3  123.108.9.134   	40%	APJII-IIX-ID
+4  180.252.3.229   	40%	telkom
+5  180.252.3.230   	32%   	telkom
+6  180.254.14.228	41.7%	telkom
 
-00401880	-25.528(dbm)	
-00402021 	-26.198(dbm)
-00401936    -22.924(dbm)
-00400347	-27.695(dbm)	
-00400946	-26.384(dbm)	
-00401733	-26.576(dbm)
+GRIYA AYU <> JKT.DR3
+ 1 192.168.1.1		0%              
+ 2 180.249.96.1		0%	telkom             
+ 3 180.252.3.229	0%	telkom            
+ 4 123.108.8.94		0%	APJII-IIX-ID            
+ 5 123.108.8.51		0%	APJII-IIX-ID          
+ 6 119.110.80.22	0%	sbp              
+ 7 119.110.84.182	0%	sbp
 
+ ///////////////////////////////////
 
-gpon-onu_1/1/5:1    -25.528(dbm)
-gpon-onu_1/1/5:2    N/A
-gpon-onu_1/1/5:3    -19.956(dbm)
-gpon-onu_1/1/5:4    -19.320(dbm)
-gpon-onu_1/1/5:5    -26.198(dbm)
-gpon-onu_1/1/5:6    -17.522(dbm)
-gpon-onu_1/1/5:7    -18.927(dbm)
-gpon-onu_1/1/5:8    -23.768(dbm)
-gpon-onu_1/1/5:9    -22.924(dbm)
-gpon-onu_1/1/5:10   -19.830(dbm)
-gpon-onu_1/1/5:11   N/A
-gpon-onu_1/1/5:12   -22.758(dbm)
-gpon-onu_1/1/5:13   -21.427(dbm)
-gpon-onu_1/1/5:15   -18.445(dbm)
-gpon-onu_1/1/5:16   -19.032(dbm)
-gpon-onu_1/1/5:17   -30.000(dbm)
-gpon-onu_1/1/5:18   N/A
-gpon-onu_1/1/5:20   -21.488(dbm)
-gpon-onu_1/1/5:21   N/A
-gpon-onu_1/1/5:22   -20.970(dbm)
-gpon-onu_1/1/5:24   -24.438(dbm)
-gpon-onu_1/1/5:25   -23.666(dbm)
-gpon-onu_1/1/5:26   -24.438(dbm)
-gpon-onu_1/1/5:27   -28.862(dbm)
-gpon-onu_1/1/5:28   -23.666(dbm)
-gpon-onu_1/1/5:29   -23.768(dbm)
-gpon-onu_1/1/5:30   -22.518(dbm)
+JKT.DR3 <> Morula
+1  119.110.84.181   	0%	sbp
+2  103.29.5.5       	0%	sbp
+3  27.111.228.155   	0%	equinix telkom
+4  180.240.190.229  	72.7%	TELIN-NET-SG telkom
+5  180.240.190.62   	0%	TELIN-NET-SG telkom
+6  180.252.3.229    	0%	telkom
+7  180.252.3.230    	0%	telkom
+8  180.249.124.164  	0%	telkom
 
-gpon-onu_1/1/5:31   -28.862(dbm)
-gpon-onu_1/1/5:32   -27.695(dbm)
-gpon-onu_1/1/5:33   -18.828(dbm)
-gpon-onu_1/1/5:48   N/A
-gpon-onu_1/1/5:66   -21.612(dbm)
-gpon-onu_1/1/5:80   -27.695(dbm)
-gpon-onu_1/1/5:95   -21.550(dbm)
-gpon-onu_1/1/5:97   N/A
+ Morula <> JKT.DR3
+
+1 192.168.1.1		    0%
+2 180.249.124.1		    0%	telkom
+3 180.252.3.229		    0%	telkom
+4 123.108.8.94		    12..	APJII-IIX-ID
+5 123.108.8.51		    0%	APJII-IIX-ID
+6 119.110.80.22		    0%	sbp
+7 119.110.84.1		    0%	sbp

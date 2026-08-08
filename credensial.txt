@@ -1,16 +1,24 @@
 === Port Switch SSH ===
 571
 
-SSH Switch Cisco
+===== SSH Switch Cisco =====
 indi
 B4nyuWan91-26
 
-SSH Switch Huawei
+===== SSH Switch Huawei =====
 SGP.EQ3.HW1							172.17.99.1	    ssh (sbpnet/Sbpnet@22#)
 JKT.APJ.HW1							172.17.100.1	ssh (sbpnet/sbpku2023#)
 JKT.DR3.HW1							172.17.101.1	ssh (sbpnet/Sbpnet@22#)
 BTM.GPN.SW01						172.17.2.1		ssh	(sbpnet/Sbpnet2023#)
 
+===== Juniper =====
+JKT.APJ.CO1 Juniper             119.110.80.5    port 571
+
+JKT.DR3.CO1 Juniper             119.110.80.6    port 571
+
+ ssh/ nocbali / Jwi!1@13
+
+=====
 SBPORG
 @WL&o4O*mP#R!
 

@@ -117,3 +117,10 @@ Urutan pengecekan standar saat ada laporan **"internet down"**:
    `display logbuffer` / `show logging`
 7. **Jika pakai fiber, cek kondisi optik**
    `display transceiver` / `show interfaces transceiver detail`
+
+
+show platform
+
+display power
+
+show environment power

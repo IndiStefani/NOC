@@ -2,3 +2,15 @@
 /queue simple set [find comment ="layanan dikembalikan ke semula 20 jul2026 ll req pak erha"] comment="BLI.CGS.PT MAJAVI BALI STARS - AKASAKA-BALI.2508081721 ( Mainlink )" max-limit=301M/301M
 
 /log info "BOD AKASAKA 2508081721 Ended: Bandwidth has been reverted to the original configuration. || Script Configure By NOC-SBP"
+
+
+
+
+===== Terbaru
+Start >>>
+/queue simple set [find name="LAN.Guest"] comment="BOD (Full Day) 8 Agustus 2026 | 130M | by pak supri" max-limit=132M/132M
+/log info "BOD.Hotel-Ayola.2505151701 || 150M Started: Bandwidth has been upgraded according to the BOD request. || Script Configured by NOC-SBP"
+
+END >>>
+/queue simple set [find name="LAN.Guest"] comment="" max-limit=85M/85M
+/log info "BOD.Hotel-Ayola.2505151701 || 150M Ended: Bandwidth has been reverted to the original configuration. || Script Configure By NOC-SBP"

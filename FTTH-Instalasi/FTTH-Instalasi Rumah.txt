@@ -1,0 +1,48 @@
+
+
+
+========  Cek ONU Unregistrasi  ==========
+show gpon onu uncfg
+
+show gpon onu by sn ZXICCD5621A9
+
+========  Cek LLID Kosong  ============
+show running-config interface gpon-olt_1/1/5
+
+-------------------------------------------------------------
+conf t
+interface gpon-olt_1/1/5
+no onu 3
+
+onu 3 type ALL-ONT sn ZXICCD5621A9
+exit
+
+interface gpon-onu_1/1/5:3
+description BTM.CMT - 00300359 MICHAEL CAHYADI ARIFFIN
+sn-bind enable sn
+tcont 1 profile 100m
+gemport 1 tcont 1
+service-port 1 vport 4 user-vlan 88 vlan 88
+exit
+
+pon-onu-mng gpon-onu_1/1/5:3
+service 1 gemport 1 vlan 88
+switchport-bind switch_0/1 iphost 1
+switchport-bind switch_0/1 veip 1
+
+pppoe 1 nat enable usr Test5000 passsword 12345
+
+onu-vlan iphost 1 up-mode add up-pri 0 up-vlan 88 down-mode transparent
+vlan-filter-mode iphost 1 tag-filter vlan-filter untag-filter transparent
+vlan-filter iphost 1 pri 0 vlan 88
+vlan port eth_0/4 mode tag vlan 88
+vlan port wifi_0/3 mode tag vlan 88
+vlan-filter-mode veip 1 tag-filter transparent untag-filter transparent
+security-mgmt 1 state enable mode forward ingress-type iphost 1 protocol web
+end
+write
+
+
+------------  Lampirkan Sesudah Instalasi  -------------------------------
+show pon power attenuation gpon-onu_1/1/5:3
+show mac gpon onu gpon-onu_1/1/5:3

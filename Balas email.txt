@@ -19,15 +19,15 @@ Dear team,
 
 Berikut hasil pengecekan saat ini : 
 - status online
-- uptime perangkat normal
-- traceroute ke internet lan customer normal
+- uptime perangkat baru
+- traceroute ke 8.8.8.8 src ip public cust normal
 - ping ptp size=1500 do-not-fragment reply tanpa paket los
 - trafik WAN
-    Tx: 828.4 kbps
-    Rx: 5.3 Mbps
+    Tx: 520 bps
+    Rx: 8.9 Kbps
 - trafic LAN
-    Tx: 5.3 Mbps
-    Rx: 631.1 kbps
+    Tx: 185 Kbps
+    Rx: 30.7 Kbps
 
 Berdasarkan log, Router mengalami restart/reboot tanpa proses shutdown yang benar. indikasi kendala kelistrikan di lokasi
 saat ini link termonitoring UP normal dan stabil

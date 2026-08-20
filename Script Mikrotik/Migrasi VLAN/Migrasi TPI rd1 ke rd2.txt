@@ -1,0 +1,38 @@
+=== Menambahkan Pool ===
+*1 = /ip pool add comment=10.193.0.0/16 name=COMET-IP.Private ranges=10.193.0.2-10.193.255.254
+
+=== Alokasi NAT Downlink ===
+/ip address set *5 address=119.110.83.29/30 comment=Alokasi-NAT disabled=no interface=Loopback-NAT network=119.110.83.28
+
+=== Add NAT ke ip Publik ===
+/ip firewall nat set *1 action=src-nat chain=srcnat comment=NAT.COMET disabled=no log=no log-prefix="" src-address=10.193.0.0/16 to-addresses=119.110.83.28/30
+
+=== Rename Interface sfp-sfpplus1 ===
+/interface set sfp-sfpplus1 comment="TRK.INT-SBP.BACKBONE-TPI.BT8.NE1-Eth1/31.10G || Uplink" disabled=no l2mtu=1580 mtu=1500 name=sfp-sfpplus1; /interface ethernet set [ find default-name=sfp-sfpplus1 ] advertise=10M-baseT-full,100M-baseT-full,1G-baseT-full,1G-baseX,10G-baseT,10G-baseSR-LR,10G-baseCR arp=enabled arp-timeout=auto auto-negotiation=yes combo-mode=auto comment="TRK.INT-SBP.BACKBONE-TPI.BT8.NE1-Eth1/31.10G || Uplink" disabled=no fec-mode=off l2mtu=1580 loop-protect=default loop-protect-disable-time=5m loop-protect-send-interval=5s mac-address=08:55:31:EB:72:4C mtu=1500 name=sfp-sfpplus1 rx-flow-control=off sfp-ignore-rx-los=no sfp-rate-select=high tx-flow-control=off
+
+=== rename Interface sfp-sfpplus2 ===
+/interface set sfp-sfpplus2 comment="TRK.INT-SBP.BACKBONE-TPI.BT8.NE1-Eth1/32.10G || Downlink" disabled=no l2mtu=1580 mtu=1500 name=sfp-sfpplus2; /interface ethernet set [ find default-name=sfp-sfpplus2 ] advertise=10M-baseT-full,100M-baseT-full,1G-baseT-full,1G-baseX,10G-baseT,10G-baseSR-LR,10G-baseCR arp=enabled arp-timeout=auto auto-negotiation=yes combo-mode=auto comment="TRK.INT-SBP.BACKBONE-TPI.BT8.NE1-Eth1/32.10G || Downlink" disabled=no fec-mode=off l2mtu=1580 loop-protect=default loop-protect-disable-time=5m loop-protect-send-interval=5s mac-address=08:55:31:EB:72:4D mtu=1500 name=sfp-sfpplus2 rx-flow-control=off sfp-ignore-rx-los=no sfp-rate-select=high tx-flow-control=off
+
+=== Enable Radius ===
+/ppp aaa set use-radius=yes
+
+=== Add vlan id ===
+/interface vlan add arp=enabled arp-timeout=auto disabled=no interface=sfp-sfpplus2 loop-protect=default loop-protect-disable-time=5m loop-protect-send-interval=5s mtu=1500 mvrp=no name=sfp-sfpplus2.vlan-0620.Fiber-Service.25M use-service-tag=no vlan-id=620
+
+=== Add PPP Profile ===
+/ppp profile add address-list="" bridge-learning=default change-tcp-mss=default idle-timeout=10m local-address=10.193.0.1 name=Service-25M on-down="" on-up="" only-one=yes rate-limit="27M/27M 0/0 0/0 0/0 8 2700k/2700k" remote-address=COMET-IP.Private session-timeout=4w2d use-compression=default use-encryption=default use-ipv6=yes use-mpls=default use-upnp=default
+
+=== Add PPP Server ===
+/interface pppoe-server server add accept-untagged=yes authentication=pap,chap,mschap1,mschap2 default-profile=Service-25M disabled=no interface=sfp-sfpplus2.vlan-0620.Fiber-Service.25M keepalive-timeout=5 max-mru=auto max-mtu=auto max-sessions=unlimited mrru=disabled one-session-per-host=yes pado-delay=10 pppoe-over-vlan-range="" service-name=Fiber.Service.25M
+
+
+/////////// CISCO ///////////
+
+TPI.BT8.NE1# show running-config interface ethernet 1/32
+
+TPI.BT8.NE1# conf t
+TPI.BT8.NE1(config)# interface ethernet 1/32
+TPI.BT8.NE1(config-if)# switchport trunk allowed vlan add 620
+TPI.BT8.NE1(config-if)# copy running-config startup-config
+
+TPI.BT8.NE1# show mac address-table interface ethernet 1/32

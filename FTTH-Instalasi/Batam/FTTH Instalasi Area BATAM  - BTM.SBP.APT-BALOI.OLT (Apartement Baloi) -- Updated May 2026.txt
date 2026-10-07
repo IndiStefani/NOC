@@ -34,21 +34,21 @@ OPEN_ZTE
 ========  Cek ONU Unregistrasi  ==========
 show gpon onu uncfg
 
-show gpon onu by sn ZTEGD771F8AE
+show gpon onu by sn ZXICCD51A0C4
 
 ========  Cek LLID Kosong  ============
-show running-config interface gpon-olt_1/2/8
+show running-config interface gpon-olt_1/1/1
 
 -------------------------------------------------------------
 configure terminal
-interface gpon-olt_1/2/8
-no onu 10
+interface gpon-olt_1/1/1
+no onu 62
 
-onu 10 type ZTE-F609 sn ZTEGD771F8AE
+onu 62 type ZTE-F609 sn ZXICCD51A0C4
 exit
 
-int gpon-onu_1/2/8:10
-description CMT.BTM - 00300784 MELYANA
+int gpon-onu_1/1/1:62
+description CMT-BTM-APR/08 - 00301267 VELLYCIA PRISCILLY CHANG
 sn-bind enable sn
 tcont 1 name PPPoE profile FTTH-T4-1G
 gemport 1 name PPPoE tcont 1
@@ -56,7 +56,7 @@ switchport mode hybrid vport 1
 service-port 1 vport 1 user-vlan 301 vlan 301
 exit
 
-pon-onu-mng gpon-onu_1/2/8:10
+pon-onu-mng gpon-onu_1/1/1:62
 service PPPoE gemport 1 vlan 301
 security-mgmt 2 state enable mode forward protocol web https
 exit
@@ -64,8 +64,8 @@ exit
 write
 
 ------------  Lampirkan Sesudah Instalasi  -------------------------------
-show pon power attenuation gpon-onu_1/2/8:10
-show mac gpon onu gpon-onu_1/2/8:10
+show pon power attenuation gpon-onu_1/1/1:62
+show mac gpon onu gpon-onu_1/1/1:62
 
 ---------------------------------------------------------------------------------
 

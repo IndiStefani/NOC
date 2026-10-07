@@ -17,13 +17,13 @@
 /ppp aaa set use-radius=yes
 
 === Add vlan id ===
-/interface vlan add arp=enabled arp-timeout=auto disabled=no interface=sfp-sfpplus2 loop-protect=default loop-protect-disable-time=5m loop-protect-send-interval=5s mtu=1500 mvrp=no name=sfp-sfpplus2.vlan-0620.Fiber-Service.25M use-service-tag=no vlan-id=620
+/interface vlan add arp=enabled arp-timeout=auto disabled=no interface=sfp-sfpplus2 loop-protect=default loop-protect-disable-time=5m loop-protect-send-interval=5s mtu=1500 mvrp=no name=sfp-sfpplus2.vlan-0614.Fiber-Service.30M use-service-tag=no vlan-id=614
 
 === Add PPP Profile ===
-/ppp profile add address-list="" bridge-learning=default change-tcp-mss=default idle-timeout=10m local-address=10.193.0.1 name=Service-25M on-down="" on-up="" only-one=yes rate-limit="27M/27M 0/0 0/0 0/0 8 2700k/2700k" remote-address=COMET-IP.Private session-timeout=4w2d use-compression=default use-encryption=default use-ipv6=yes use-mpls=default use-upnp=default
+/ppp profile add address-list="" bridge-learning=default change-tcp-mss=default idle-timeout=10m local-address=10.193.0.1 name=Service-30M on-down="" on-up="" only-one=yes rate-limit="32M/32M 0/0 0/0 0/0 8 3200k/3200k" remote-address=COMET-IP.Private session-timeout=4w2d use-compression=default use-encryption=default use-ipv6=yes use-mpls=default use-upnp=default
 
 === Add PPP Server ===
-/interface pppoe-server server add accept-untagged=yes authentication=pap,chap,mschap1,mschap2 default-profile=Service-25M disabled=no interface=sfp-sfpplus2.vlan-0620.Fiber-Service.25M keepalive-timeout=5 max-mru=auto max-mtu=auto max-sessions=unlimited mrru=disabled one-session-per-host=yes pado-delay=10 pppoe-over-vlan-range="" service-name=Fiber.Service.25M
+/interface pppoe-server server add accept-untagged=yes authentication=pap,chap,mschap1,mschap2 default-profile=Service-30M disabled=no interface=sfp-sfpplus2.vlan-0614.Fiber-Service.30M keepalive-timeout=5 max-mru=auto max-mtu=auto max-sessions=unlimited mrru=disabled one-session-per-host=yes pado-delay=10 pppoe-over-vlan-range="" service-name=Fiber.Service.30M
 
 
 /////////// CISCO ///////////
@@ -32,7 +32,7 @@ TPI.BT8.NE1# show running-config interface ethernet 1/32
 
 TPI.BT8.NE1# conf t
 TPI.BT8.NE1(config)# interface ethernet 1/32
-TPI.BT8.NE1(config-if)# switchport trunk allowed vlan add 620
+TPI.BT8.NE1(config-if)# switchport trunk allowed vlan add 614
 TPI.BT8.NE1(config-if)# copy running-config startup-config
 
 TPI.BT8.NE1# show mac address-table interface ethernet 1/32

@@ -1,3 +1,10 @@
+===== Pass Heretic PC =====
+nocsbp2020
+
+===== Radio Wireless Ubiquiti =====
+proSBP
+SBPro2018
+
 === Port Switch SSH ===
 571
 

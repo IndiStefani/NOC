@@ -54,6 +54,7 @@ Berdasarkan hasil monitoring tersebut,
 
 konektivitas internet broadband dari sisi CPE menuju internet dalam kondisi normal pada saat pengecekan dan tidak ditemukan indikasi packet loss maupun latency yang signifikan.
 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 Berikut update pengecekan saat ini
 Time: 0ms di semua baris → latency sangat rendah/bagus
@@ -62,3 +63,14 @@ Min/Avg/Max: 0ms semua
 TTL 64 konsisten → jalur stabil
 
 Kesimpulan: koneksi ke IP PTP ini sangat sehat, tidak ada latency dan tidak ada packet loss.
+
+//////////////////////////////////////////////////////////////
+
+Berikut hasil pengecekan:
+-Ping PTP ke CPE Tidak reply
+-MAC address CPE Tidak terdeteksi di switch
+Analisa sementara:
+CPE belum reachable dan MAC address perangkat belum terdeteksi di switch. Indikasi awal dapat mengarah ke kendala pada perangkat di lokasi, jalur ke CPE, atau sisi vendor.
+
+Tindak lanjut:
+Follow Up ke vendor dan Paralel follow up ke PIC untuk pengecekan kondisi perangkat di lokasi.

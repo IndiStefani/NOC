@@ -8,9 +8,9 @@
 
 ===== Terbaru
 Start >>>
-/queue simple set [find name="LAN.Guest"] comment="BOD (Full Day) 8 Agustus 2026 | 130M | by pak supri" max-limit=132M/132M
-/log info "BOD.Hotel-Ayola.2505151701 || 150M Started: Bandwidth has been upgraded according to the BOD request. || Script Configured by NOC-SBP"
+/queue simple set [find name="BLI.CGS.PT MAJAVI BALI STARS - AKASAKA-BALI.2508081721 || 300 Mbps ( Mainlink )"] comment="BLI.CGS.PT MAJAVI BALI STARS - AKASAKA-BALI.2508081721 ( Mainlink )" max-limit=601M/601M
+/log info "BLI.CGS.PT MAJAVI BALI STARS - AKASAKA-BALI.2508081721 || 600M Started: Bandwidth has been upgraded according to the BOD request. || Script Configured by NOC-SBP"
 
 END >>>
-/queue simple set [find name="LAN.Guest"] comment="" max-limit=85M/85M
-/log info "BOD.Hotel-Ayola.2505151701 || 150M Ended: Bandwidth has been reverted to the original configuration. || Script Configure By NOC-SBP"
+/queue simple set [find name="BLI.CGS.PT MAJAVI BALI STARS - AKASAKA-BALI.2508081721 || 300 Mbps ( Mainlink )"] comment="" max-limit=301M/301M
+/log info "BLI.CGS.PT MAJAVI BALI STARS - AKASAKA-BALI.2508081721 ( Mainlink ) || 600M Ended: Bandwidth has been reverted to the original configuration. || Script Configure By NOC-SBP"

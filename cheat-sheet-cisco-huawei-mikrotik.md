@@ -253,3 +253,8 @@ export                                # lihat config aktif
 - Cisco & Huawei syntax-nya beda tapi filosofi mirip (keduanya pakai `show`/`display` + keyword mirip).
 - MikroTik jauh lebih berbeda karena berbasis path/menu (`/menu/sub-menu command`), bukan flat command seperti IOS/VRP.
 - RouterOS v6 dan v7 punya perbedaan cukup besar khusus di bagian BGP dan routing filter — pastikan cek versi dulu sebelum apply command.
+
+
+
+JKT.NCX-KRT.SW01# show mac address-table dynamic vlan 1015
+JKT.NCX-KRT.SW01# clear mac address-table dynamic vlan 1015

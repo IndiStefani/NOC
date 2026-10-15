@@ -23,6 +23,8 @@ JKT.APJ.CO1 Juniper             119.110.80.5    port 571
 
 JKT.DR3.CO1 Juniper             119.110.80.6    port 571
 
+BTM.GPN.CO1
+
  ssh/ nocbali / Jwi!1@13
 
 =====
@@ -32,7 +34,8 @@ SBPORG
 ===== UNIFY CLOUD =====
 https://global2.sbp.net.id:8443/manage/gc6xyf3s/dashboard
 admin
-global2sbp2021
+global2sbp2012
+S0c26sbpnet
 
 ===== CRM COMET =====
 https://crm.comet.net.id/

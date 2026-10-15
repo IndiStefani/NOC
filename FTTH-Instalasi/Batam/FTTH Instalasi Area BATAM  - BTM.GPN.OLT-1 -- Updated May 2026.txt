@@ -51,30 +51,30 @@ HG8546M
 ========  Cek ONU Unregistrasi  ==========
 show gpon onu uncfg
 
-show gpon onu by sn ZXICCD5345D6
+show gpon onu by sn ZXICCD5A6D43
 
 ========  Cek LLID Kosong  ============
-show running-config interface gpon-olt_1/1/5
+show running-config interface gpon-olt_1/1/12
 
 -------------------------------------------------------------
 configure terminal
-interface gpon-olt_1/1/5
-no onu 11
+interface gpon-olt_1/1/12
+no onu 20
 
-onu 11 type ZTE-F609 sn ZXICCD5345D6
+onu 20 type ZTE-F609 sn ZXICCD5A6D43
 exit
 
-interface gpon-onu_1/1/5:11
-description FAT-CH - 00300236 KENDY
+interface gpon-onu_1/1/12:20
+description CMT-BTM-FRE2-12 - 00301272 PUTRI HANDAYANI
 sn-bind enable sn
 tcont 1 name PPPoE profile FTTH-T4-1G
 gemport 1 name PPPoE unicast tcont 1 dir both
 switchport mode hybrid vport 1
-service-port 1 vport 1 user-vlan 166 vlan 166
+service-port 1 vport 1 user-vlan 313 vlan 313
 exit
 
-pon-onu-mng gpon-onu_1/1/5:11
-service PPPoE gemport 1 vlan 166
+pon-onu-mng gpon-onu_1/1/12:20
+service PPPoE gemport 1 vlan 313
 security-mng 2 state enable mode permit protocol web
 exit
 exit
@@ -82,8 +82,8 @@ write
 
 
 ------------  Lampirkan Sesudah Instalasi  -------------------------------
-show pon power attenuation gpon-onu_1/1/5:11
-show mac gpon onu gpon-onu_1/1/5:11
+show pon power attenuation gpon-onu_1/1/12:20
+show mac gpon onu gpon-onu_1/1/12:20
 
 ---------------------------------------------------------------------------------
 
@@ -106,7 +106,7 @@ show running-config interface gpon-olt_1/2/6	Melihat list ONU di dalam satu inte
 
 -----
 #Ganti ONT/SN tanpa re-bind
-BTM.GPN.OLT(config)#interface gpon-onu_1/2/15:8
-BTM.GPN.OLT(config-if)#registration-method sn ZTEGC85A4520
+BTM.GPN.OLT(config)#interface gpon-onu_1/1/13:10
+BTM.GPN.OLT(config-if)#registration-method sn ZXICCD5D1AB2
 
 -----
